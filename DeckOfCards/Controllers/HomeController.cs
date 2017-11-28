@@ -32,7 +32,7 @@ namespace DeckOfCards.Controllers
 
         public ActionResult Deck()
         {
-            HttpWebRequest WR = WebRequest.CreateHttp("https://deckofcardsapi.com/api/deck/new/draw/?count=5");
+            HttpWebRequest WR = WebRequest.CreateHttp("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
             WR.UserAgent = ".NET Framework Test";
 
             HttpWebResponse Response = (HttpWebResponse)WR.GetResponse();
@@ -45,9 +45,21 @@ namespace DeckOfCards.Controllers
 
                 string Deck = reader.ReadToEnd();
 
-                JObject JsonData = JObject.Parse(Deck);
+                JObject JsonDeck = JObject.Parse(Deck);
 
-                ViewBag.Cards = JsonData["cards"];
+                string deckId = JsonDeck["deck_id"].ToString();
+
+                WR = WebRequest.CreateHttp($"https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=5");
+
+                Response = (HttpWebResponse)WR.GetResponse();
+
+                StreamReader reader2 = new StreamReader(Response.GetResponseStream());
+
+                string DeckList = reader2.ReadToEnd();
+
+                JsonDeck = JObject.Parse(DeckList);
+
+                ViewBag.Cards = JsonDeck["cards"];
 
                 return View();
             }

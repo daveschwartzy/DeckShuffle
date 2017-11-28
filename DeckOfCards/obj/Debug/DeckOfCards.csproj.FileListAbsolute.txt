@@ -88,7 +88,6 @@ C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\bin\System.Web.Razor.xml
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\bin\System.Web.WebPages.xml
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\bin\System.Web.WebPages.Razor.xml
-C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\obj\Debug\DeckOfCards.csprojResolveAssemblyReference.cache
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\obj\Debug\DeckOfCards.csproj.CoreCompileInputs.cache
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\obj\Debug\DeckOfCards.dll
 C:\Users\Dave\source\repos\DeckOfCards\DeckOfCards\obj\Debug\DeckOfCards.pdb
